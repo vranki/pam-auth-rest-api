@@ -1,0 +1,31 @@
+{
+  "name": "pam-auth-rest-api",
+  "version": "1.0.0",
+  "description": "REST api for authenticating using PAM - for Matrix mxisd",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vranki/pam-auth-rest-api.git"
+  },
+  "keywords": [
+    "rest",
+    "pam",
+    "matrix",
+    "mxisd"
+  ],
+  "author": "Ville Ranki",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/vranki/pam-auth-rest-api/issues"
+  },
+  "homepage": "https://github.com/vranki/pam-auth-rest-api#readme",
+  "dependencies": {
+    "authenticate-pam": "1.0.2",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "express-generator": "^4.16.1"
+  }
+}
