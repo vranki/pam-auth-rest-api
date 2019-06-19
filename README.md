@@ -2,7 +2,10 @@
 
 REST api for authenticating via PAM - for use with Matrix mxisd rest authenticator.
 
-WIP / Alpha
+Uses only localpart and password for authentication.
+
+Alpha, not tested properly yet but feedback is welcome. Please create github
+issues or pull requests.
 
 ## Installation:
 
@@ -20,4 +23,4 @@ For custom port, use env variable:
 
 ### Curl test command
 
-```curl -X POST -d "{ \"auth\": { \"mxid\": \"@john.doe:example.org\", \"localpart\": \"john.doe\", \"domain\": \"example.org\", \"password\": \"passwordOfTheUser\" } }" -H "Content-Type: application/json" http://localhost:3000/_mxisd/backend/api/v1/auth/login```
+```curl -X POST -d '{ "auth": { "mxid": "@john.doe:example.org", "localpart": "john.doe", "domain": "example.org", "password": "passwordOfTheUser" } }' -H "Content-Type: application/json" http://localhost:3000/_mxisd/backend/api/v1/auth/login```

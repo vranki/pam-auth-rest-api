@@ -17,7 +17,7 @@ app.post("/_mxisd/backend/api/v1/auth/login", (req, res, next) => {
             }
         }
         if(err) {
-          console.log("PAM authentication failed: ", err);
+          console.log("PAM authentication failed:", err);
         } else {
           resobject["auth"]["success"] = true
           resobject["auth"]["id"] = {
