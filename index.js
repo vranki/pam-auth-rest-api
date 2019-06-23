@@ -23,6 +23,8 @@ app.post("/_matrix-internal/identity/v1/check_credentials", (req, res, next) => 
     } else {
       resobject["auth"]["success"] = true
       resobject["auth"]["mxid"] = id
+      // Profile MUST exist - otherwise the auth plugin crashes.
+      resobject["auth"]["profile"] = { "display_name": username }
     }
     res.json(resobject);
   });
