@@ -1,8 +1,12 @@
 # pam-auth-rest-api
 
-REST api for authenticating via PAM - for use with Matrix mxisd rest authenticator.
+REST api for authenticating via PAM - for use with Synapse rest authenticator 
+found at https://github.com/kamax-matrix/matrix-synapse-rest-password-provider 
 
-Uses only localpart and password for authentication.
+Note: this started as mxisd rest api implementation - see git tag "mxisd" for
+mxisd version. mxisd is not maintained anymore.
+
+Uses username part of matrix id and password for authentication.
 
 Alpha, not tested properly yet but feedback is welcome. Please create github
 issues or pull requests.
@@ -23,4 +27,4 @@ For custom port, use env variable:
 
 ### Curl test command
 
-```curl -X POST -d '{ "auth": { "mxid": "@john.doe:example.org", "localpart": "john.doe", "domain": "example.org", "password": "passwordOfTheUser" } }' -H "Content-Type: application/json" http://localhost:3000/_mxisd/backend/api/v1/auth/login```
+```curl -X POST -d '{ "user": { "id": "@john.doe:example.org", "password": "passwordOfTheUser" } }' -H "Content-Type: application/json" http://localhost:3000/_matrix-internal/identity/v1/check_credentials```
