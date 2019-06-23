@@ -8,10 +8,10 @@ mxisd version. mxisd is not maintained anymore.
 
 Uses username part of matrix id and password for authentication.
 
-Alpha, not tested properly yet but feedback is welcome. Please create github
-issues or pull requests.
+Status is working - it seems to work for us. Please create github
+issues or pull requests if needed.
 
-## Installation:
+## Installation
 
 ```npm install```
 
@@ -19,11 +19,13 @@ On ubuntu/debian building authenticate-pam requires dev package ```libpam0g-dev`
 
 ## Running
 
-```node index.js```
+You most probably need to run this as root:
+
+```sudo node index.js```
 
 For custom port, use env variable:
 
-```PORT=4242 node index.js```
+```PORT=4242 sudo node index.js```
 
 ### Curl test command
 
