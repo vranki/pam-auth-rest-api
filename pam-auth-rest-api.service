@@ -1,0 +1,12 @@
+[Unit]
+Description=PAM auth REST API
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+#Environment=PORT=3000
+# Edit this:
+ExecStart=node /path/to/index.js
+
+[Install]
+WantedBy=multi-user.target
